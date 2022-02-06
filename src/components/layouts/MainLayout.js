@@ -5,6 +5,7 @@ import Separator from '../separator'
 import HomeTV from '../Hometv'
 import HomeMobile from '../HomeMobile'
 import HomeMac from '../HomeMac'
+import HomeJeunesse from '../HomeJeunesse'
 
 const Mainlayout = ({ children }) => {
     return (
@@ -20,6 +21,8 @@ const Mainlayout = ({ children }) => {
             <HomeMobile />
             <Separator />
             <HomeMac />
+            <Separator />
+            <HomeJeunesse/>
             <Separator />
             <footer>
                 <Footer />
