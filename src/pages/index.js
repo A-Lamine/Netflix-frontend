@@ -3,9 +3,15 @@ import styles from "./index.module.scss"
 import HeaderLogo from '../components/header/HeaderLogo/HeaderLogo';
 import HeaderToolbar from '../components/header/HeaderToolbar/HeaderToolbar';
 import chevronright from '../../public/chevron-right.png'
+import Separator from '../components/separator'
+import HomeTV from '../components/Hometv'
+import HomeMobile from '../components/HomeMobile'
+import HomeMac from '../components/HomeMac'
+import HomeJeunesse from '../components/HomeJeunesse'
 
 const index = () => {
     return (
+        <div>
         <div className={styles.body}>
             <header className={styles.header__main}>
                 <HeaderLogo />
@@ -34,6 +40,15 @@ const index = () => {
                 </div>
             </div>
         </div>
+                    <Separator />
+                    <HomeTV />
+                    <Separator />
+                    <HomeMobile />
+                    <Separator />
+                    <HomeMac />
+                    <Separator />
+                    <HomeJeunesse/>
+                    </div>
     );
 };
 

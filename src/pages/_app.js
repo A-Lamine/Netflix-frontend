@@ -8,9 +8,12 @@ function MyApp({ Component, pageProps }) {
       const { asPath } = useRouter();
 
       return (
+            
             <MainLayout>
                   <Component {...pageProps} />
             </MainLayout>
+
+            
       )
 }
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from "./Footer.module.scss";
-
+import Separator from "../separator" 
 const Footer = () => {
   return (
-
+    <div>
+    <Separator />
     <div className={styles.FooterWrapper}>
       <div className={styles.FooterTitle}>Des questions ? Appelez le <a className={styles.a} href='#'>(+33) 0805-543-063</a></div>
       <div className={styles.FooterRow}>
@@ -36,7 +37,7 @@ const Footer = () => {
       </div>
       <span className={styles.FooterLink}>Netflix France</span>
     </div>
-
+    </div>
   );
 }
 
