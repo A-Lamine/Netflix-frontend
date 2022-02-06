@@ -1,7 +1,27 @@
-.card{
+.body {
+    background-image: url("../../public/home-bg.jpg");
+    height: 750px;
+    flex-direction: column;
+    display: flex;
+    @media (max-width: 950px) {
+        flex-direction: column;
+    }
+}
+.header__main {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: none;
+}
+/* .card{
+    position: relative;
+    width: 100%;
+    padding: 75px 0;
+    max-width: 950px;
+    margin: 0 auto;
     text-align: center;
-    margin-top: 100px;
-    
+   
+
 }
 
 .h1{
@@ -19,7 +39,6 @@
     font-size: 30px;
     font-weight: normal;
     margin: auto;
-    /* border: solid red; */
     width: fit-content;
     padding: 10px;
     max-width: 640px;
@@ -27,12 +46,12 @@
 }
 
 .form{
-    display: block;
+    display: grid;
     
 }
 .email_form{
     
-    margin-top: 60px;
+    margin-top: 30px;
 
 }
 
@@ -42,7 +61,6 @@
     font-weight: normal;
 }
 .email{
-    
     max-width: 450px;
     width: 80%;
     border: none;
@@ -54,14 +72,137 @@
 
 .btn_begin{
     margin-top: 10px;
-    height: 62px;
+    height: 60px;
     width: 15%;
-    font-size: 16px;
+    font-size: 26px;
     background-color: red;
     border: none;
-    
+        
 }
 .a{
     text-decoration: none;
     color: white;
 } 
+ */
+
+.card {
+    position: relative;
+    width: 100%;
+    padding: 165px 45px;
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 950px) {
+        flex-direction: column;
+    }
+}
+
+.h1 {
+    color: white;
+    font-weight: bold;
+    max-width: 800px;
+    font-size: 4rem;
+    margin: auto;
+    @media (max-width: 950px) {
+        font-size: 2.5rem;
+        text-align: center;
+        padding-right: initial;
+    }
+    @media (max-width: 550px) {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+.h2 {
+    color: white;
+    font-size: 1.625rem;
+    font-weight: 400;
+    margin: 1rem auto;
+    @media (max-width: 950px) {
+        font-size: 1.5rem;
+        text-align: center;
+        padding-right: initial;
+    }
+    @media (max-width: 550px) {
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
+.form {
+    max-width: 950px;
+    padding-top: 0.85rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.h3 {
+    max-width: none;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    padding: 0 5%;
+    margin: 0 auto;
+    font-weight: 400;
+    @media (max-width: 950px) {
+        font-size: 1rem;
+        text-align: center;
+        padding-right: initial;
+    }
+    @media (max-width: 550px) {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+.email_form{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    padding: 0 20px;
+    @media (max-width: 950px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+}
+.email{
+    max-width: 450px;
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    height: 60px;
+    font-size: 20px;
+    
+}
+
+.btn_begin{
+    width: fit-content;
+    height: 60px;
+    background: #e50914;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 32px;
+    font-size: 26px;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    a {
+      color: white;
+    }
+    img {
+      margin-left: 10px;
+      filter: brightness(0) invert(1);
+      width: 24px;
+    }
+    &:hover {
+      background: #f40612;
+    }
+    @media (max-width: 950px) {
+      height: 50px;
+      font-size: 16px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+}

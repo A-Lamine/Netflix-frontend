@@ -1,9 +1,14 @@
 import React from 'react';
 import styles from "./index.module.scss"
-
+import HeaderLogo from '../components/header/HeaderLogo/HeaderLogo';
+import HeaderToolbar from '../components/header/HeaderToolbar/HeaderToolbar';
 const index = () => {
     return (
-        <div>
+        <div className={styles.body}>
+        <header className={styles.header__main}>
+        <HeaderLogo />
+        <HeaderToolbar />
+        </header>
             <div className={styles.card}>
                 <h1 className={styles.h1}>
                 Films, séries TV et bien plus en illimité.

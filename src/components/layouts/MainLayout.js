@@ -1,27 +1,30 @@
 import React from 'react';
-import HeaderLogo from '../header/HeaderLogo/HeaderLogo';
-import HeaderToolbar from '../header/HeaderToolbar/HeaderToolbar';
 import styles from "./MainLayout.module.scss";
 import Footer from '../Footer/Footer';
-
+import Separator from '../separator'
+import HomeTV from '../Hometv'
+import HomeMobile from '../HomeMobile'
+import HomeMac from '../HomeMac'
 
 const Mainlayout = ({ children }) => {
     return (
         <>
-            
-                <header className={styles.header__main}>
-                    <HeaderLogo />
-                    <HeaderToolbar />
-                </header>
-                <main>
-                    <div className={styles.container}>
-                        {children}
-                    </div>
-                </main>
-                <footer>
-                    <Footer/>
-                </footer>
-           
+            <main>
+                <div>
+                    {children}
+                </div>
+            </main>
+            <Separator />
+            <HomeTV />
+            <Separator />
+            <HomeMobile />
+            <Separator />
+            <HomeMac />
+            <Separator />
+            <footer>
+                <Footer />
+            </footer>
+
         </>
     );
 }
