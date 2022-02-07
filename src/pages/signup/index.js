@@ -11,12 +11,12 @@ const index = () => {
                 <HeaderLogo />
             </div>
             <div className={styles.signinform}>
-                <h1 className={styles.formh1}>S'identifier</h1>
+                <h1 className={styles.formh1}>S'inscrire</h1>
                 <form className={styles.form}>
-                    <Input type="text" placeholder="Nom" />
                     <Input type="email" placeholder='Adresse mail' />
+                    <Input type="text" placeholder="Nom" />
                     <Input type="password" placeholder='mot de passe' />
-                    <button className="btn btn-Submith" type='submit'>S'identifier</button>
+                    <button className="btn btn-Submith" type='submit'>S'inscrire</button>
                 </form>
 
                 <div className={styles.information}>
