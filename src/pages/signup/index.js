@@ -9,9 +9,9 @@ import fb from '../../../public/FB.png'
 
 const index = () => {
     const router = useRouter();
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState(  typeof window !== "undefined" ? ({ email : localStorage.getItem("email")}) : null);
 
-
+    console.log(user)
     const handleSubmit = (e) => {
         e.preventDefault();
         authService.register(user)
@@ -49,6 +49,7 @@ const index = () => {
                         id="email"
                         name="email"
                         placeholder="Mon email"
+                        value={user?.email}
                         required={true}
                         onChange={(e) => {
                             setUser({ ...user, email: e.target.value });
