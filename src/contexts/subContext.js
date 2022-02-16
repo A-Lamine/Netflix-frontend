@@ -1,10 +1,10 @@
 import { createContext, useState, useEffect } from "react";
 
-const CartContext = createContext({
+const subContext = createContext({
   user: typeof window !== "undefined" ? localStorage.getItem("user") : null
 });
 
-export const CartContextProvider = ({ children }) => {
+export const subContextProvider = ({ children }) => {
  
 
   const context = {

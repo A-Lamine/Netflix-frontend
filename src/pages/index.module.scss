@@ -1,7 +1,12 @@
 .body {
     background-image: url("../../public/home-bg.jpg");
+    background-size: 100% 100%;
     flex-direction: column;
     display: flex;
+    @media (max-width: 1600px) {
+        background-size: auto;
+    }
+    
     @media (max-width: 950px) {
         flex-direction: column;
     }

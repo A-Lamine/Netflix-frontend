@@ -7,8 +7,8 @@ const withAuth = (WrappedComponent) => {
     const [verify, setVerify] = useState(false);
 
     useEffect(() => {
-      const user = localStorage.getItem("user");
-     user ? setVerify(true): Router.push("/login")
+      const token = localStorage.getItem("token");
+     token ? setVerify(true): Router.push("/login")
 
     }, []);
     if (verify) {

@@ -6,8 +6,11 @@ const verefySub = (WrappedComponent) => {
     const [verify, setVerify] = useState(false);
 
     useEffect(() => {
-      const user = localStorage.getItem("user");
-      user?.abannoment ? setVerify(true): Router.push("/subscribtion")
+      const token = JSON.parse(localStorage.getItem("token"));
+
+      token?.subscription ? setVerify(true): Router.push("/subscription")
+      console.log(token)
+      console.log(token.subscription)
     }, []);
     if (verify) {
       return <WrappedComponent {...props} />;

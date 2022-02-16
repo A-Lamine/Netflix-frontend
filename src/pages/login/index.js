@@ -20,7 +20,7 @@ const index = () => {
                 return false;
             }
             console.log(data);
-            localStorage.setItem("user", JSON.stringify(data));
+            localStorage.setItem("token", JSON.stringify(data));
             router.push("/movies")
         })
         .catch((err)=>{

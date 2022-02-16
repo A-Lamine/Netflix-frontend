@@ -1,0 +1,56 @@
+.body{
+    background-color: white;
+    color: black;
+}
+.header__main {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.panelcenter{
+    display: block;
+    transform: none;
+    opacity: 1;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto 15px;
+    max-width: 978px;
+
+}
+.planformcontainer{
+
+}
+
+.informations{
+    margin-top: 20px;
+}
+.h1{
+    font-size: 32px;
+    color: #333;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.liste{
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #333;
+    padding: 0 16px;
+    .info{
+        padding: 10px 0px;
+    }
+}
+
+.tableau{
+
+}
+
+.btncontainer{
+    
+
+}
