@@ -1,10 +1,10 @@
 import { createContext, useState, useEffect } from "react";
 
-const subContext = createContext({
+const SubContext = createContext({
   user: typeof window !== "undefined" ? localStorage.getItem("user") : null
 });
 
-export const subContextProvider = ({ children }) => {
+export const SubContextProvider = ({ children }) => {
  
 
   const context = {
@@ -22,4 +22,4 @@ export const subContextProvider = ({ children }) => {
   );
 };
 
-export default subContext;
+export default SubContext;

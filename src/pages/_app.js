@@ -1,17 +1,22 @@
 import '../styles/styles.scss';
 import { useRouter } from 'next/router';
 import MainLayout from '../components/layouts/MainLayout';
-
+import { ApolloProvider } from "@apollo/client";
+import client from "../apollo/apollo-client";
+import { SubContextProvider } from '../contexts/SubContext';
 
 
 function MyApp({ Component, pageProps }) {
       const { asPath } = useRouter();
 
-      return (
-            
-            <MainLayout>
-                  <Component {...pageProps} />
-            </MainLayout>
+      return ( 
+            <ApolloProvider client={client}>
+            {/* <CartContextProvider> */}
+              <MainLayout>
+                <Component {...pageProps} />
+              </MainLayout>
+            {/* </CartContextProvider> */}
+          </ApolloProvider>
 
             
       )
