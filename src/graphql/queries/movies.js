@@ -5,7 +5,10 @@ export const getMovies = gql`
         getMovies{
             id,
             title,
+            background,
             img,
+            description,
+            video,
             classification{
                 name
             }
@@ -18,7 +21,10 @@ export const getMovie = gql`
         getMovie (id:$id){
             id,
             title,
+            background,
             img,
+            description,
+            video,
             classification{
                 name
             }
