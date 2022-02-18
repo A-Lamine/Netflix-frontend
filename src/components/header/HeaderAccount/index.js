@@ -27,7 +27,6 @@ const index = () => {
         setMovie(data.getMovies[Math.floor(Math.random() * data.getMovies.length)])
 
     });
-
     
 
     return (

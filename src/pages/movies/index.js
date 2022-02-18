@@ -5,14 +5,34 @@ import HeaderAccount from '../../components/header/HeaderAccount'
 import MyMovies from '../../components/MyMovies'
 import HeaderLogo from '../../components/header/HeaderLogo/HeaderLogo'
 import styles from './index.module.scss'
+import { getCatalogues } from '../../graphql/queries/catalogues';
+import { useQuery } from '@apollo/client';
 const index = () => {
+
+  const { loading, error, data } = useQuery(getCatalogues);
+
+  if (loading) {
+    return "loading...";
+}
+
+if (error) {
+    
+    return null;
+}
 
   return (
     <div className={styles.backround}>
       <HeaderLogo/>
       <HeaderAccount/>
-      <MyMovies title="Tendances actuelles"></MyMovies>
-      <MyMovies title="New"></MyMovies>
+                      {
+                        data.getCatalogues.map((catalogue) => (
+                          <>
+                                <MyMovies key={catalogue.id} title={catalogue.name}></MyMovies>
+                          </>  
+                          
+                        ))
+                    }
+
     </div>
   )
 }
