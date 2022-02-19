@@ -13,3 +13,16 @@
     }
     
 }
+.header__icone{
+    img {
+        width: 5rem;
+        height: 3rem;
+        margin: 1ex;
+        margin-left: 3ex;
+        @media (max-width: 450px) {
+            width: 5rem;
+            height: 2rem;
+
+        }
+    }
+}

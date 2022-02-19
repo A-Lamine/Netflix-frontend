@@ -4,6 +4,7 @@ import withAuth from '../../HOOC/withauth'
 import HeaderAccount from '../../components/header/HeaderAccount'
 import MyMovies from '../../components/MyMovies'
 import HeaderLogo from '../../components/header/HeaderLogo/HeaderLogo'
+import HeaderConecte from '../../components/header/HeaderConecte'
 import styles from './index.module.scss'
 import { getCatalogues } from '../../graphql/queries/catalogues';
 import { useQuery } from '@apollo/client';
@@ -22,7 +23,7 @@ if (error) {
 
   return (
     <div className={styles.backround}>
-      <HeaderLogo/>
+      <HeaderConecte/>
       <HeaderAccount/>
                       {
                         data.getCatalogues.map((catalogue) => (

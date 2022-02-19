@@ -25,7 +25,7 @@ const index = () => {
         <div className={styles.body}>
             <header className={styles.header__main}>
                 <HeaderLogo />
-                <HeaderToolbar />
+                <HeaderToolbar/>
             </header>
             <div className={styles.card}>
                 <h1 className={styles.h1}>

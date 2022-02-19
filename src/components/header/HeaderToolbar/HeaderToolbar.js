@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./HeaderToolbar.module.scss";
 
 
-const HeaderToolbar = () => {
+const HeaderToolbar = (props) => {
 
     return (
         <div>

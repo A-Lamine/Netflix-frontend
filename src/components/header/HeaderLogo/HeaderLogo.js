@@ -6,7 +6,7 @@ const Headerlogo = () => {
     return (
         <div className={styles.header__logo}>
             <a href='/'>
-            <img src={LogoImg.src} alt="Nike"/>
+            <img src={LogoImg.src} alt="Netflix"/>
             </a>
         </div>
     );
