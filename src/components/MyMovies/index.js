@@ -24,8 +24,16 @@ function index(props) {
         <div className={styles.row__posters}>
                     {
                         data.getMovies.map((movie) => (
-                            
-                                <img key={movie.id} className={styles.row__posterLarge} src={movie.img} alt="" />
+                                
+                                movie.classification.map((film)=>(
+                                    film.name == props.title ? (
+                                        
+                                        <img key={movie.id} className={styles.row__posterLarge} src={movie.img} alt="" />
+                                    
+                                        ) : ""
+                                )
+                                
+                                )
                             
                         ))
                     }
