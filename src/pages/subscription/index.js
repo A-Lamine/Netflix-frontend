@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HeaderLogo from "../../components/header/HeaderLogo/HeaderLogo"
 import HeaderToolbar from "../../components/header/HeaderToolbar/HeaderDisc"
 import styles from "./index.module.scss"
 import Checkmarque from "../../../public/checkmarque"
+import withAuth from '../../HOOC/withauth'
 
-console.log(Checkmarque)
 function index() {
+    const [colorl,setColorstandard]= useState(true)
+    const [colorr,setColorpremieum]= useState(false)
+        
+    function changeColorstandar() {
+        setColorstandard(false);
+        setColorpremieum(true);
+    }
+
+    function changeColorrPremieum() {
+        setColorstandard(true);
+        setColorpremieum(false);
+    }
+    
+
     return (
         <div className={styles.body}>
             <header className={styles.header__main}>
@@ -31,37 +45,65 @@ function index() {
                             </div>
                             <div className={styles.info_flex}>
                                 <div className={styles.checkmarque}><Checkmarque /></div>
-                                <div className={styles.info}>Changez ou annulez votre forfait à tout moment.</div>
+                                <div className={styles.info}>Changez ou annullez votre forfait à tout moment.</div>
                             </div>
                         </div>
 
                     </div>
                     <div className={styles.tableau}>
                         <div className={styles.tableau_row1}>
-                            <input type="button" className={styles.row_btn} value="Standard"></input>
-                            <input type="button" className={styles.row_btn} value="Premium"></input>
+                            <input type='button'  className={styles.row_btn} onClick={changeColorstandar} value="Standard"></input>
+                            <input type='button'  className={styles.row_btn} onClick={changeColorrPremieum} value="Premium"></input>
 
                         </div>
                         <div className={styles.tableau_row2}>
                             <div>
-                            <span>Abonnement mensuel</span>
+                            <div className={styles.span}>Abonnement mensuel</div>
                             </div>
                             <div className={styles.offres}>
-                            <div className='a'>8,99</div>
-                            <div className='b'>13,49</div>
+                            <div className={colorr && styles.selected}>8,99 €</div>
+                            <div className={colorl && styles.selected}>17,99 €</div>
                             </div>
                         </div>
 
-                        <div>
-
+                        <div className={styles.tableau_row2}>
+                            <div>
+                            <div className={styles.span}>Qualité vidéo</div>
+                            </div>
+                            <div className={styles.offres}>
+                            <div className={colorr && styles.selected}>Bonne</div>
+                            <div className={colorl && styles.selected}>Optimal</div>
+                            </div>
                         </div>
 
-                        <div>
-
+                        <div className={styles.tableau_row2}>
+                            <div>
+                            <div className={styles.span}>résolutions</div>
+                            </div>
+                            <div className={styles.offres}>
+                            <div className={colorr && styles.selected}>480p</div>
+                            <div className={colorl && styles.selected}>4K+HDR</div>
+                            </div>
                         </div>
 
-                        <div>
+                        <div className={styles.tableau_row2}>
+                            <div>
+                            <div className={styles.span}>Abonnement mensuel</div>
+                            </div>
+                            <div className={styles.offres}>
+                            <div className={colorr && styles.selected}>8,99</div>
+                            <div className={colorl && styles.selected}>13,49</div>
+                            </div>
+                        </div>
 
+                        <div className={styles.tableau_row2}>
+                            <div>
+                            <div className={styles.span}>Netflix sur votre TV, ordinateur, smartphone et tablette</div>
+                            </div>
+                            <div className={styles.offres}>
+                            <div className={colorr && styles.selected}><Checkmarque /></div>
+                            <div className={colorl && styles.selected}><Checkmarque /></div>
+                            </div>
                         </div>
                     </div>
 
@@ -83,4 +125,4 @@ function index() {
     )
 }
 
-export default index
+export default withAuth(index)
