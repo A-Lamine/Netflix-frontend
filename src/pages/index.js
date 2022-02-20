@@ -11,6 +11,7 @@ import HomeMac from '../components/HomeMac'
 import HomeJeunesse from '../components/HomeJeunesse'
 
 const index = () => {
+
     const [email,setemail] = useState(null)
 
     const handelsubmit = (e) =>{

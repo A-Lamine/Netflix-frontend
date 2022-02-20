@@ -9,15 +9,15 @@ import fb from '../../../public/FB.png'
 
 const index = () => {
     const router = useRouter();
-    const [user, setUser] = useState(  typeof window !== "undefined" ? ({ email : localStorage.getItem("email")}) : null);
-
+    const [user, setUser] = useState(  typeof window !== "undefined" ? ( user !=null ?  ({ email : localStorage.getItem("email")}) : {email : ""}) : null);
+    
     console.log(user)
     const handleSubmit = (e) => {
         e.preventDefault();
         authService.register(user)
             .then((data) => {
                 console.log(data);
-                localStorage.setItem("token", data.token);
+                localStorage.setItem("token", JSON.stringify(data));
                 router.push("/movies");
             })
             .catch((err) => {

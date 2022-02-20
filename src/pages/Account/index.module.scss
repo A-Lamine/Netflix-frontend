@@ -1,10 +1,12 @@
 .panel{
     display: flex;
     flex-direction: column;
-    padding: 30px 50px;
     background-color: white;
     color: black;
-    overflow: scroll;
+    align-items: center;
+}
+.tableau{
+    padding: 20px 20px 80px 20px;
     
 }
 .premier{
@@ -14,50 +16,82 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 11px;
+    @media(max-width:940px){
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 }
-.h11{
+.h1{
     font-size: 50px;
     font-weight: bold;
+    @media(max-width:940px){
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
     
 }
 .h3{
     font-size: 20px;
     font-weight: bold;
+    @media(max-width:940px){
+        font-size: 15px;
+    }
 }
 
 .deuxieme{
     display: flex;
     flex-direction: row;
-
     border-bottom: 1px solid gray;
     padding: 11px 0px;
+    @media(max-width:940px){
+        flex-direction: column;
+    }
 }
 
 .abonnementpanel{
     display: flex;
     flex-direction: column;
+    @media(max-width:940px){
+        flex-direction: row;
+        justify-content:space-between;
+        padding-bottom: 10px;
+        align-items: center;
+        border-bottom: 2px solid gray;
+    }
     
 }
 .h2{
     padding: 10px 0px;
     font-size: 20px;
+    @media(max-width:940px){
+        font-size: 15px;
+        font-weight: bold;
+    }
 }
 
 .btn{
-    background-color: red;
+    background-color: rgb(221, 214, 214);
     width: auto;
     height: 50px;
-    color: white;
+    border: 0px;
+    color: black;
+    cursor: pointer;
+    @media(max-width:940px){
+        width: 100px;
+    }
 }
 
 .panelinfo{
     display: flex;
     flex-direction: column;
-    width: 80%;
     padding-left: 50px;
+    @media(max-width:940px){
+        padding-top: 10px;
+        padding-left: 0px;
+    }
 }
 .r1c2r1{
-    
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid gray;
@@ -65,7 +99,6 @@
 }
 
 .rr1c2r1{
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -78,9 +111,13 @@
 .lien{
     font-size: 20px;
     color: #3390FF;
+    @media(max-width:940px){
+        font-size: 15px;
+    }
 }
 
 .r2c2r1{
+    border-bottom: 2px solid gray;
     padding-top: 10px;
     display: flex;
     flex-direction: row;
@@ -97,7 +134,29 @@
     display: flex;
     flex-direction: column;
     text-align: right;
+    width: 100%;
     .lien{
         padding: 5px 0px;
     }
+}
+
+.cadeaux{
+    padding: 10px 0px;
+    text-align: end;
+    .lien{
+        padding: 5px 0px;
+    }
+}
+.troisieme{
+    display: flex;
+    align-items: center;
+    .h2{
+        width: 40%;
+    }
+}
+.troisieme_deux{
+   width: 100%;
+    display: flex;
+    padding-left: 10px;
+    justify-content: space-between;
 }
