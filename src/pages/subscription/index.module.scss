@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     padding: 15px;
+    border-bottom: 1px solid rgb(238, 220, 220);
 }
 
 .panelcenter{
@@ -40,17 +41,86 @@
     margin-bottom: 0;
     font-size: 18px;
     color: #333;
-    padding: 0 16px;
+    
     .info{
-        padding: 10px 0px;
+        padding: 10px 8px;
+    }
+    .info_flex{
+        display: flex;
+        align-items: center;
+    }
+    .checkmarque{
+        color: red;
     }
 }
 
 .tableau{
+    display: block;
 
+    .tableau_row1{
+        flex-direction: row;
+        display: flex;
+        justify-content: flex-end;
+
+        .row_btn{
+            width: 120px;
+            height: 120px;
+            padding: 1px;
+            background: #e50914;
+            color: #fff;
+            font-weight: 700;
+            opacity: .6;
+            text-align: center;
+            border-radius: 2px;
+            border: none;
+            font-size: 17px;
+            margin: 0px 5px 0px;
+            &:focus{
+                background: #e50914ed;
+                opacity: unset;
+            }
+        }
+    }
+    .tableau_row2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(238, 220, 220);
+        
+        .offres{
+            
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        span{
+        
+           
+
+        }
+    }
 }
 
+.soustable{
+    color: #737373;
+    font-size: 13px;
+    padding: 10px 0px 5px 0px;
+}
 .btncontainer{
-    
-
+    text-align: center;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 0 16px;
+    margin-top: 24px;
+    .btn_next{
+        width: 100%;
+        color: #fff;
+        border: 0px;
+        background-color: #e50914;
+        min-height: 64px;
+        font-weight: 500;
+        font-size: 24px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 }
