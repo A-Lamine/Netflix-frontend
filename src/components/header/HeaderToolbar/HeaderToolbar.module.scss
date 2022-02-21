@@ -2,7 +2,7 @@
     background-color: #e50914;
     color: white;
     line-height: normal;
-    padding: 7px 17px;
+   
     font-size: 1rem;
     border: none;
     margin-right: 10px;
@@ -15,5 +15,10 @@
         width: 7rem;
         height: 2rem;
         font-size: 1rem;
+    }
+    @media(max-width: 750px){
+        width: 4rem;
+        height: 1rem;
+        font-size: 10px;
     }
 }

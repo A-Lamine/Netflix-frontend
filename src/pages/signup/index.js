@@ -72,10 +72,10 @@ const index = () => {
 
                 <div className={styles.information}>
                     <div className={styles.remmember}>
-                        <a href='https://www.instagram.com/lamine_adel/'>Besoin d'aide ?</a>
+                        <a href='https://www.instagram.com/lamine_adel/' target="_blank">Besoin d'aide ?</a>
                     </div>
                     <div className={styles.fb}>
-                        <a href='https://www.facebook.com/lamine.leparrin/'><img src={fb.src} className={styles.imgfb} /></a>
+                        <a href='https://www.facebook.com/lamine.leparrin/' target="_blank"><img src={fb.src} className={styles.imgfb} /></a>
                         <span>S'identifer avec Facebook</span>
                     </div>
                     <div className={styles.signup}>Vous avez un compte ? <a href='/login'>Connectez-vous</a></div>

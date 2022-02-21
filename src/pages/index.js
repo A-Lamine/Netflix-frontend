@@ -9,6 +9,7 @@ import HomeTV from '../components/Hometv'
 import HomeMobile from '../components/HomeMobile'
 import HomeMac from '../components/HomeMac'
 import HomeJeunesse from '../components/HomeJeunesse'
+import connected from '../HOOC/connected';
 
 const index = () => {
 
@@ -63,4 +64,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default connected(index);

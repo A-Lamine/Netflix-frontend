@@ -13,9 +13,9 @@ const HeaderDisc = () => {
     }
     return (
         <div>
-            <a href='#'>
+            
                 <button onClick={handelsubmit} className={styles.btn_login}>déconnecter</button>
-            </a>
+            
         </div>
     );
 

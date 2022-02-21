@@ -35,7 +35,7 @@ function index() {
                     lamine @gmail.com
                   </div>
                   <div className={styles.lien}>
-                    <a href='#'>
+                    <a href='/Account/email'>
                       Modifier l'adresse e-mail
                     </a>
                   </div>
@@ -48,7 +48,7 @@ function index() {
                     Mot de passe : *********
                   </div>
                   <div className={styles.lien}>
-                    <a href='#'>
+                    <a href='/Account/password'>
                       Modifier le mot de passe
                     </a>
                   </div>

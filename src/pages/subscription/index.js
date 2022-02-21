@@ -61,8 +61,8 @@ function index() {
                             <div className={styles.span}>Abonnement mensuel</div>
                             </div>
                             <div className={styles.offres}>
-                            <div className={colorr && styles.selected}>8,99 €</div>
-                            <div className={colorl && styles.selected}>17,99 €</div>
+                            <div className={colorr ? styles.selected : null}>8,99 €</div>
+                            <div className={colorl ? styles.selected : null}>17,99 €</div>
                             </div>
                         </div>
 
@@ -71,8 +71,8 @@ function index() {
                             <div className={styles.span}>Qualité vidéo</div>
                             </div>
                             <div className={styles.offres}>
-                            <div className={colorr && styles.selected}>Bonne</div>
-                            <div className={colorl && styles.selected}>Optimal</div>
+                            <div className={colorr ? styles.selected : null}>Bonne</div>
+                            <div className={colorl ? styles.selected : null}>Optimal</div>
                             </div>
                         </div>
 
@@ -81,8 +81,8 @@ function index() {
                             <div className={styles.span}>résolutions</div>
                             </div>
                             <div className={styles.offres}>
-                            <div className={colorr && styles.selected}>480p</div>
-                            <div className={colorl && styles.selected}>4K+HDR</div>
+                            <div className={colorr ? styles.selected : null}>480p</div>
+                            <div className={colorl ? styles.selected : null}>4K+HDR</div>
                             </div>
                         </div>
 
@@ -91,8 +91,8 @@ function index() {
                             <div className={styles.span}>Abonnement mensuel</div>
                             </div>
                             <div className={styles.offres}>
-                            <div className={colorr && styles.selected}>8,99</div>
-                            <div className={colorl && styles.selected}>13,49</div>
+                            <div className={colorr ? styles.selected : null}>8,99</div>
+                            <div className={colorl ? styles.selected : null}>13,49</div>
                             </div>
                         </div>
 
@@ -101,8 +101,8 @@ function index() {
                             <div className={styles.span}>Netflix sur votre TV, ordinateur, smartphone et tablette</div>
                             </div>
                             <div className={styles.offres}>
-                            <div className={colorr && styles.selected}><Checkmarque /></div>
-                            <div className={colorl && styles.selected}><Checkmarque /></div>
+                            <div className={colorr ? styles.selected : null}><Checkmarque /></div>
+                            <div className={colorl ? styles.selected : null}><Checkmarque /></div>
                             </div>
                         </div>
                     </div>

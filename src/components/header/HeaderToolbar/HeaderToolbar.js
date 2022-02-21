@@ -6,9 +6,9 @@ const HeaderToolbar = (props) => {
 
     return (
         <div>
-            <a href='/login'>
-                <button className={styles.btn_login}>S'identifier</button>
-            </a>
+           
+                <button className={styles.btn_login}> <a href='/login'>S'identifier</a></button>
+            
         </div>
     );
 

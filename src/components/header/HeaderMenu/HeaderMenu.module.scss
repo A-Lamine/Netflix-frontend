@@ -12,6 +12,10 @@
             font-weight: 600;
             font-size: 13px;
             padding-bottom: 10px;
+            @media (max-width: 670px){
+                font-size: 10px;
+                margin: 0px 10px 0px 10px;
+            }
             &.active {
                 font-weight: bold;
                 position: relative;
@@ -28,7 +32,5 @@
             }
         }
     }
-    @media (max-width: 670px){
-        display: none;
-    }
+
 }
