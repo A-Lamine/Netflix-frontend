@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../../components/header/HeaderConecte'
 import styles from './index.module.scss'
 function index() {
+ 
+  const [email, setEmail] = useState(null)
+  const [forfait,setForfait] = useState(null)
+    /* const email = typeof window !== "undefined" ? JSON.parse(localStorage.getItem('token')).email.toString() : null */
+    /* const forfait = typeof window !== "undefined" ? JSON.parse(localStorage.getItem('token')).subscription : null */
+   
+
+    useEffect(() => setEmail(JSON.parse(localStorage.getItem('token')).email),[])
+    useEffect(() => setForfait(JSON.parse(localStorage.getItem('token')).subscription),[])
+
   return (
     <div>
       <Header />
@@ -32,7 +42,7 @@ function index() {
               < div className={styles.r1c2r1}>
                 <div className={styles.rr1c2r1}>
                   <div className={styles.h3}>
-                    lamine @gmail.com
+                  {email}
                   </div>
                   <div className={styles.lien}>
                     <a href='/Account/email'>
@@ -118,7 +128,7 @@ function index() {
               D'etails du forfait
             </div>
             <div className={styles.troisieme_deux}>
-              <div className={styles.h3}>Premium</div>
+              <div className={styles.h3}>{forfait}</div>
               <div className={styles.lien}><a href='#'>Changer le forfait</a></div>
 
             </div>

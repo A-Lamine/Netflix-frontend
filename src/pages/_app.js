@@ -11,11 +11,11 @@ function MyApp({ Component, pageProps }) {
 
       return ( 
             <ApolloProvider client={client}>
-            {/* <CartContextProvider> */}
+           {/*  <SubContextProvider>  */}
               <MainLayout>
                 <Component {...pageProps} />
               </MainLayout>
-            {/* </CartContextProvider> */}
+           {/*  </SubContextProvider>  */}
           </ApolloProvider>
 
             

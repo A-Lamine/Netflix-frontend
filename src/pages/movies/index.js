@@ -27,10 +27,7 @@ if (error) {
       <HeaderAccount/>
                       {
                         data.getCatalogues.map((catalogue) => (
-                          <>
-                                <MyMovies key={catalogue.id+Math.random()} title={catalogue.name}></MyMovies>
-                          </>  
-                          
+                                <MyMovies key={catalogue.id+Math.random()} title={catalogue.name}></MyMovies>              
                         ))
                     }
 

@@ -8,7 +8,7 @@ import { getMovies } from '../../../graphql/queries/movies'
 import { useQuery } from '@apollo/client';
 import Delete from '../../../../public/delete.png'
 import more from '../../../../public/more.png'
-
+import add from '../../../../public/add.png'
 
 function index() {
     const { loading, error, data } = useQuery(getMovies);
@@ -28,17 +28,12 @@ function index() {
             <div className={styles.main}>
                 <Nav />
                 <div className={style.panel}>
-                    
                     <div className={style.list}>
+                    <Label id="Gestion des Films" more={add.src}/> 
                     <Label id="ID" name="Nom" action="Action"/>
                         {
                             data.getMovies.map((movie) => (
-                                <>
-
-                                    <Label key={movie.id} id={movie.id} name={movie.title} delete={Delete.src} more={more.src} />
-                                    
-                                </>
-
+                                    <Label key={movie.id} id={movie.id} name={movie.title} delete={Delete.src} more={more.src} />  
                             ))
                         }
                     </div>

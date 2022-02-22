@@ -2,18 +2,20 @@
 import { createContext, useState, useEffect } from "react";
 
 const SubContext = createContext({
-  user: typeof window !== "undefined" ? localStorage.getItem("user") : null
+  /* token: typeof window !== "undefined" ? localStorage.getItem("token") : null , */
+  unevaleur: 1,
+
 });
 
 export const SubContextProvider = ({ children }) => {
  
 
   const context = {
-    user,
+    /* token, */
   };
 
   useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(user));
+    /* localStorage.setItem("token", JSON.stringify(token)); */
     
    
   }, []);

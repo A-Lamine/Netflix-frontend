@@ -8,6 +8,7 @@ import { getCatalogues } from '../../../graphql/queries/catalogues'
 import { useQuery } from '@apollo/client';
 import Delete from '../../../../public/delete.png'
 import more from '../../../../public/more.png'
+import add from '../../../../public/add.png'
 
 
 function index() {
@@ -28,16 +29,16 @@ function index() {
             <div className={styles.main}>
                 <Nav />
                 <div className={style.panel}>
-                    
                     <div className={style.list}>
+                    <Label id="Gestion des Catalogues" more={add.src}/> 
                     <Label id="ID" name="Name" action="Action"/>
                         {
                             data.getCatalogues.map((catalogue) => (
-                                <>
+                              
 
                                     <Label key={catalogue.id} id={catalogue.id} name={catalogue.name} delete={Delete.src} more={more.src} />
                                     
-                                </>
+                                
 
                             ))
                         }

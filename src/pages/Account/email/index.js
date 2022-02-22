@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useRouter } from 'next/router';
 import Input from '../../../components/UI/Input';
 import styles from '../../login/index.module.scss'
 import nwstyles from '../password/index.module.scss'
@@ -6,9 +7,22 @@ import HeaderConecte from '../../../components/header/HeaderConecte'
 
 
 function index() {
-
+    const router = useRouter();
+    const [email,setEmail] =  useState(  typeof window !== "undefined" ? (JSON.parse(localStorage.getItem('token')).email) : null);
+    const [token, setToken] = useState(  typeof window !== "undefined" ? (JSON.parse(localStorage.getItem('token'))) : null);
+    console.log(token)
+   /*  localStorage.setItem('token') */
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        localStorage.setItem("token", JSON.stringify(token))
+        alert('email modifier')
+        router.push("/Account")
+        
+    }
     return (
+        
         <div>
+           
             <div className={nwstyles.body}>
                 <HeaderConecte />
                 <div className={styles.signinform}>
@@ -19,7 +33,8 @@ function index() {
                             label="mon email"
                             id="email"
                             name="Adresse mail"
-                            value="Lamine@lamine.com" 
+                            value={email}
+                            
                             onChange={(e) => {
                                 
                             }}
@@ -32,6 +47,10 @@ function index() {
                             name="email"
                             placeholder="Nouvelle adresse mail"
                             required={true}
+                            onChange={(e) => {
+                                setToken({...token,email:e.target.value})
+                                
+                            }}
 
                         />
                         <Input
