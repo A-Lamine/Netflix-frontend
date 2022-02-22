@@ -52,8 +52,8 @@ function index() {
                     </div>
                     <div className={styles.tableau}>
                         <div className={styles.tableau_row1}>
-                            <input type='button'  className={styles.row_btn} onClick={changeColorstandar} value="Standard"></input>
-                            <input type='button'  className={styles.row_btn} onClick={changeColorrPremieum} value="Premium"></input>
+                            <input type='button'  className={`${styles.row_btn} ${styles.selected}`} onClick={changeColorstandar} value="Standard"></input>
+                            <input type='button'  className={`${styles.row_btn}`} onClick={changeColorrPremieum} value="Premium"></input>
 
                         </div>
                         <div className={styles.tableau_row2}>

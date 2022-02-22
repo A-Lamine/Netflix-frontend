@@ -1,0 +1,23 @@
+.label{
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 2px solid grey;
+    padding: 20px;
+    font-size: 23px;
+    img{
+        background-color: white;
+    }
+    label{
+        width: 100%;
+    }
+    @media(max-width:1040px){
+        font-size: 1rem;
+    }
+    @media(max-width:650px){
+        font-size: 11px;
+    }
+    .img_groupe{
+        display: flex;
+        gap: 2px;
+    }
+}

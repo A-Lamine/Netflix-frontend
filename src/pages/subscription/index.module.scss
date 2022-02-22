@@ -113,15 +113,16 @@
             font-weight: 700;
             color: #737373;
             fill: #737373;
-            .selected{
-                color: red;
-            }
+           
         }
         .span{
             color: #333;
         fill: #333;
         }
     }
+}
+.selected{
+    color: red;
 }
 
 .soustable{
