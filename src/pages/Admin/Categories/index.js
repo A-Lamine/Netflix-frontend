@@ -30,16 +30,13 @@ function index() {
                 <Nav />
                 <div className={style.panel}>
                     <div className={style.list}>
+                    <a href='/Admin/Categories/Add'>
                     <Label id="Gestion des Catalogues" more={add.src}/> 
+                    </a>
                     <Label id="ID" name="Name" action="Action"/>
                         {
-                            data.getCatalogues.map((catalogue) => (
-                              
-
-                                    <Label key={catalogue.id} id={catalogue.id} name={catalogue.name} delete={Delete.src} more={more.src} />
-                                    
-                                
-
+                            data.getCatalogues.map((catalogue) => (                       
+                                    <Label key={catalogue.id} id={catalogue.id} name={catalogue.name} delete={Delete.src} more={more.src} />                                                          
                             ))
                         }
                     </div>
