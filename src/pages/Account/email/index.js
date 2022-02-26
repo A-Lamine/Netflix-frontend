@@ -7,16 +7,16 @@ import HeaderConecte from '../../../components/header/HeaderConecte'
 
 
 function index() {
-    const Router = useRouter();
-    const [email,SetEmail] =  useState(  typeof window !== "undefined" ? (JSON.parse(localStorage.getItem('token')).email) : null);
-    const [token, SetToken] = useState(  typeof window !== "undefined" ? (JSON.parse(localStorage.getItem('token'))) : null);
-    console.log(token)
+    const router = useRouter();
+    const [email,setEmail] =  useState(  typeof window !== "undefined" ? (JSON.parse(localStorage.getItem('token')).email) : null);
+    const [token, setToken] = useState(  typeof window !== "undefined" ? (JSON.parse(localStorage.getItem('token'))) : null);
+    
    /*  localStorage.setItem('token') */
     const handleSubmit = (e) => {
         e.preventDefault();
         localStorage.setItem("token", JSON.stringify(token))
         alert('email modifier')
-        Router.push("/Account")
+        router.push("/Account")
         
     }
     return (
@@ -48,7 +48,7 @@ function index() {
                             placeholder="Nouvelle adresse mail"
                             required={true}
                             onChange={(e) => {
-                                SetToken({...token,email:e.target.value})
+                                setToken({...token,email:e.target.value})
                                 
                             }}
 
