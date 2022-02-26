@@ -12,11 +12,13 @@ import { useMutation } from "@apollo/react-hooks";
 
 
 function index() {
-    const [name,setName] = useState({})
-   console.log(name)
-    const [handleSubmit, {loading, error, data}] = useMutation(Catalogue, {
+    const [name, setName] = useState()
+
+   
+
+    const [handleSubmit, { loading, error, data }] = useMutation(Catalogue, {
         variables: {
-            name: name.name
+            name: name
         }
     });
 
@@ -28,38 +30,37 @@ function index() {
         alert(error)
         return null;
     }
-    
-    console.log(Catalogue)
+
 
     return (
-        
+
         <div>
             <Header />
             <div className={styles.main}>
                 <Nav />
                 <div className={style.panel}>
                     <div className={style.list}>
-                       <Label id="Nom"/>     
+                        <Label id="Nom" />
                         <form className={stylesadd.form} onSubmit={handleSubmit}>
-                        <Input
-                        type="text"
-                        label="Catalogue"
-                        id="Catalogue"
-                        name="Catalogue"
-                        placeholder="Nom de la nouvelle Categorie"
-                        required={true}
-                        onChange={(e) => {
-                            setName(e.target.value)
-                        }}
-                    />
-                    <button type="submit" className="btn btn-Submith">Ajouter</button>
-                    {
-                    data ? (
-                        <Message message="Categorie ajoutée avec succes" type="success" />
-                    )
-                        :
-                       ""
-                    }
+                            <Input
+                                type="text"
+                                label="Catalogue"
+                                id="Catalogue"
+                                name="Catalogue"
+                                placeholder="Nom de la nouvelle Categorie"
+                                required={true}
+                                onChange={(e) => {
+                                    setName(e.target.value)
+                                }}
+                            />
+                            <button type="submit" className="btn btn-Submith">Ajouter</button>
+                            {
+                                data ? (
+                                    <Message message="Categorie ajoutée avec succes" type="success" />
+                                )
+                                    :
+                                    ""
+                            }
                         </form>
                     </div>
                 </div>

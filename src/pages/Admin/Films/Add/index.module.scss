@@ -1,0 +1,79 @@
+.form_add_movie{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 40px;
+}
+
+
+.row_add_movie{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    @media(max-width:550px){
+        display: block;
+    }
+   
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(44, 42, 42);
+    h3{
+        margin: 0px 20px 0px 20px;
+        font-size: 25px;
+        width: 25%;
+        @media(max-width:550px){
+            width: auto;
+            margin: 10px;
+        }
+    }
+    Input{
+        width: 300px;
+        @media(max-width:550px){
+            width: 100%;
+            margin: 10px;
+        }
+    }
+    textarea{
+        width: 300px;
+        padding: 5px;
+        background: #333;
+        color: white;
+        transition: 0.3s all;
+        border-radius: 4px;
+        height: 150px;
+        margin-bottom: 20px;
+        @media(max-width:550px){
+            width: 100%;
+            margin: 10px;
+        }
+    }
+    .list_categories{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        
+        .one_categorie{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 5px;
+            
+            label{
+                font-size: 20px;
+                
+            }
+            input{
+                width: 15px;
+                height: 15px;
+                
+            }
+           
+        }
+    }
+    
+}
+.panel_button{
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}

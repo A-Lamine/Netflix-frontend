@@ -11,11 +11,11 @@ export const SubContextProvider = ({ children }) => {
  
 
   const context = {
-    /* token, */
+    /* user, */
   };
 
   useEffect(() => {
-    /* localStorage.setItem("token", JSON.stringify(token)); */
+    /* localStorage.setItem("usze", JSON.stringify(user)); */
     
    
   }, []);

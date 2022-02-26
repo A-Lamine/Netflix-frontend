@@ -29,7 +29,9 @@ function index() {
                 <Nav />
                 <div className={style.panel}>
                     <div className={style.list}>
+                    <a href='/Admin/Films/Add'>
                     <Label id="Gestion des Films" more={add.src}/> 
+                    </a>
                     <Label id="ID" name="Nom" action="Action"/>
                         {
                             data.getMovies.map((movie) => (

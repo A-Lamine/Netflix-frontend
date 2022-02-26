@@ -23,9 +23,9 @@ function index(props) {
         <div className={styles.h1}>{props.title}</div>
         <div className={styles.row__posters}>
                     {
-                        data.getMovies.map((movie) => (
+                        data?.getMovies.map((movie) => (
                                 
-                                movie.classification.map((film)=>(
+                                movie?.classification.map((film)=>(
                                     film.name == props.title ? (
                                         
                                         <img key={movie.id} className={styles.row__posterLarge} src={movie.img} alt="" />
