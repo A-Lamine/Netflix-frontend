@@ -9,6 +9,7 @@ import { useQuery } from '@apollo/client';
 import Delete from '../../../../public/delete.png'
 import more from '../../../../public/more.png'
 import add from '../../../../public/add.png'
+import Link from 'next/link'
 
 function Index() {
     const { loading, error, data } = useQuery(getMovies);
@@ -29,9 +30,11 @@ function Index() {
                 <Nav />
                 <div className={style.panel}>
                     <div className={style.list}>
-                        <a href='/Admin/Films/Add'>
-                            <Label id="Gestion des Films" more={add.src} />
-                        </a>
+                        <Link href='/Admin/Films/Add'>
+                            <a>
+                                <Label id="Gestion des Films" more={add.src} />
+                            </a>
+                        </Link>
                         <Label id="ID" name="Nom" action="Action" />
                         {
                             data.getMovies.map((movie) => (

@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from "./HeaderToolbar.module.scss";
-import Link from 'next/link'
+import Router from 'next/router';
 
 const HeaderToolbar = (props) => {
+    function login(){
+        Router.push('/login')
+    }
 
     return (
         <div>
 
-            <button className={styles.btn_login}><Link href='/login'> <a>S&apos;identifier</a></Link></button>
+            <button className={styles.btn_login} onClick={login}>S&apos;identifier</button>
 
         </div>
     );

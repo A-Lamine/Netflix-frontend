@@ -134,7 +134,7 @@ function Index() {
 
           <div className={styles.troisieme}>
             <div className={styles.h2}>
-              D'etails du forfait
+              D&apos;etails du forfait
             </div>
             <div className={styles.troisieme_deux}>
               <div className={styles.h3}>{forfait}</div>

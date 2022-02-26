@@ -8,6 +8,7 @@ import HeaderConecte from '../../components/header/HeaderConecte'
 import styles from './index.module.scss'
 import { getCatalogues } from '../../graphql/queries/catalogues';
 import { useQuery } from '@apollo/client';
+
 const Index = () => {
 
   const { loading, error, data } = useQuery(getCatalogues);

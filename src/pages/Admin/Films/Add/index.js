@@ -13,44 +13,44 @@ import { getCatalogues } from '../../../../graphql/queries/catalogues'
 import { useMutation } from "@apollo/react-hooks";
 
 
-function index() {
-/*     const [title, setTitle] = useState()
-    const [background, setBackground] = useState()
-    const [img, setImg] = useState()
-    const [video, setVideo] = useState()
-    const [description, setDescription] = useState()*/
+function Index() {
+    /*     const [title, setTitle] = useState()
+        const [background, setBackground] = useState()
+        const [img, setImg] = useState()
+        const [video, setVideo] = useState()
+        const [description, setDescription] = useState()*/
     const [classification, setClassification] = useState([]);
     const [movie, setMovie] = useState({});
     const { loading, error, data } = useQuery(getCatalogues);
-/*     console.log(movie.title)
-    console.log(movie.background)
-    console.log(movie.img)
-    console.log(movie.description)
-    console.log(movie.video) */
+    /*     console.log(movie.title)
+        console.log(movie.background)
+        console.log(movie.img)
+        console.log(movie.description)
+        console.log(movie.video) */
 
 
-    const [handleSubmit, {loading2,error2,data2}] =  useMutation(Movies, {
+    const [handleSubmit, { loading2, error2, data2 }] = useMutation(Movies, {
         variables: {
             title: movie.title,
             background: movie.background,
             img: movie.img,
-            description:movie.description,
+            description: movie.description,
             video: movie.video,
             classification: classification
         }
     });
-    
-  
-    if ((loading)||(loading2)) {
+
+
+    if ((loading) || (loading2)) {
         console.log('....loading')
         return "loading...";
-        
+
     }
 
-    if ((error)||(error2)) {
+    if ((error) || (error2)) {
         return null,
-        console.log(error2)
-  
+            console.log(error2)
+
     }
 
 
@@ -73,7 +73,7 @@ function index() {
                                 placeholder="Nom Du Film"
                                 required={true}
                                 onChange={(e) => {
-                                    setMovie({...movie, title:e.target.value})
+                                    setMovie({ ...movie, title: e.target.value })
                                 }}
                             />
 
@@ -89,7 +89,7 @@ function index() {
                                 placeholder="Couverture Large Du Film"
                                 required={true}
                                 onChange={(e) => {
-                                    setMovie({...movie, background:e.target.value})
+                                    setMovie({ ...movie, background: e.target.value })
                                 }}
                             />
 
@@ -107,7 +107,7 @@ function index() {
                                 placeholder="Couverture Film"
                                 required={true}
                                 onChange={(e) => {
-                                    setMovie({...movie, img:e.target.value})
+                                    setMovie({ ...movie, img: e.target.value })
                                 }}
                             />
 
@@ -123,7 +123,7 @@ function index() {
                                 placeholder="Lien de la video Youtube"
                                 required={true}
                                 onChange={(e) => {
-                                    setMovie({...movie, video:e.target.value})
+                                    setMovie({ ...movie, video: e.target.value })
                                 }}
                             />
 
@@ -138,7 +138,7 @@ function index() {
                                 placeholder="Description du Film"
                                 required={true}
                                 onChange={(e) => {
-                                    setMovie({...movie, description:e.target.value})
+                                    setMovie({ ...movie, description: e.target.value })
                                 }}
                             />
 
@@ -154,13 +154,13 @@ function index() {
                                                 type="checkbox"
                                                 onChange={(e) => {
                                                     classification.indexOf(catalogue.id) == -1 ?
-                                                    setClassification([...classification, catalogue.id]) 
-                                                    :
-                                                    classification.splice(classification.indexOf(catalogue.id),1); return classification
-                                                         
+                                                        setClassification([...classification, catalogue.id])
+                                                        :
+                                                        classification.splice(classification.indexOf(catalogue.id), 1); return classification
+
                                                 }}
                                             />
-                                           
+
                                             <label>{catalogue.name}</label>
                                         </div>
                                     ))
@@ -172,12 +172,12 @@ function index() {
                             <button type='submit' className='btn btn-Submith'>Ajouter</button>
                         </div>
                         {
-                                data2 ? (
-                                    <Message message="Film ajouter avec succès" type="success" />
-                                )
-                                    :
-                                    ""
-                            }
+                            data2 ? (
+                                <Message message="Film ajouter avec succès" type="success" />
+                            )
+                                :
+                                ""
+                        }
 
                     </form>
 
@@ -188,4 +188,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

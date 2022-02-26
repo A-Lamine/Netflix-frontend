@@ -30,7 +30,7 @@ const Index = () => {
                 <HeaderLogo />
             </div>
             <div className={styles.signinform}>
-                <h1 className={styles.formh1}>S'inscrire</h1>
+                <h1 className={styles.formh1}>S&apos;inscrire</h1>
                 <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
                     <Input
                         type="text"
@@ -72,7 +72,7 @@ const Index = () => {
 
                 <div className={styles.information}>
                     <div className={styles.remmember}>
-                        <a href='https://www.instagram.com/lamine_adel/'>Besoin d'aide ?</a>
+                        <a href='https://www.instagram.com/lamine_adel/'>Besoin d&apos;aide ?</a>
                     </div>
                     <div className={styles.fb}>
                         <a href='https://www.facebook.com/lamine.leparrin/'><img src={fb.src} className={styles.imgfb} /></a>
