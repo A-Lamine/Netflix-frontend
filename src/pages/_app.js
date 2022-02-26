@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import MainLayout from '../components/layouts/MainLayout';
 import { ApolloProvider } from "@apollo/client";
 import client from "../apollo/apollo-client";
-import { SubContextProvider } from '../contexts/SubContext';
+import { SubContextProvider } from '../contexts/subContext';
 
 
 function MyApp({ Component, pageProps }) {
