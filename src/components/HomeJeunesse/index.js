@@ -1,5 +1,5 @@
 import React from 'react';
-import homejeunesse from "../../../public/home-Jeunesse.png";
+import homejeunesse from "../../../public/home-jeunesse.png";
 import styles from "./index.module.scss"
 
 
