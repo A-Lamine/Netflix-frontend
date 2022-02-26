@@ -3,7 +3,7 @@ import HeaderLogo from "../../components/header/HeaderLogo/HeaderLogo"
 import HeaderToolbar from "../../components/header/HeaderToolbar/HeaderDisc"
 import styles from "./index.module.scss"
 import Checkmarque from "../../../public/checkmarque"
-import withAuth from '../../HOOC/withauth'
+import withAuth from '../../HOOC/withAuth'
 
 function Index() {
     const [colorl, setColorstandard] = useState(true)

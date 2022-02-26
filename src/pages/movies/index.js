@@ -1,6 +1,6 @@
 import React from 'react'
 import verefySub from '../../HOOC/verefySub'
-import withAuth from '../../HOOC/withauth'
+import withAuth from '../../HOOC/withAuth'
 import HeaderAccount from '../../components/header/HeaderAccount'
 import MyMovies from '../../components/MyMovies'
 import HeaderLogo from '../../components/header/HeaderLogo/HeaderLogo'
