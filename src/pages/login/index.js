@@ -6,6 +6,7 @@ import Message from "../../components/UI/Message/Message";
 import Input from '../../components/UI/Input';
 import fb from '../../../public/FB.png'
 import authService from '../../services/auth.service';
+import Link from 'next/link';
 
 
 const Index = () => {
