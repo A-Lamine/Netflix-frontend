@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/header/HeaderConecte'
 import styles from './index.module.scss'
-function index() {
+
+
+
+
+function Index() {
  
   const [email, setEmail] = useState(null)
   const [forfait,setForfait] = useState(null)
@@ -32,7 +36,7 @@ function index() {
                 Abonnement et facturation
               </div>
               <button className={styles.btn}>
-                Annuler l'abonnement
+                Annuler l&apos;abonnement
               </button>
             </div>
             {/* // colonne 2 de row 1 */}
@@ -46,7 +50,7 @@ function index() {
                   </div>
                   <div className={styles.lien}>
                     <a href='/Account/email'>
-                      Modifier l'adresse e-mail
+                      Modifier l&apos;adresse e-mail
                     </a>
                   </div>
                 </div>
@@ -139,4 +143,4 @@ function index() {
   )
 }
 
-export default index
+export default Index
