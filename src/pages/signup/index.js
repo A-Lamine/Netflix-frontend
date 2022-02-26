@@ -76,7 +76,7 @@ const Index = () => {
                     </div>
                     <div className={styles.fb}>
                         <a href='https://www.facebook.com/lamine.leparrin/'><img src={fb.src} className={styles.imgfb} /></a>
-                        <span>S'identifer avec Facebook</span>
+                        <span>S&apos;identifer avec Facebook</span>
                     </div>
                     <div className={styles.signup}>Vous avez un compte ? <Link href='/login'><a>Connectez-vous</a></Link></div>
                     <div className={styles.span}>Cette page est protégée par Google reCAPTCHA pour nous assurer que vous n&apos;êtes pas un robot. </div>
