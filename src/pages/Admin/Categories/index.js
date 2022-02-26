@@ -9,9 +9,9 @@ import { useQuery } from '@apollo/client';
 import Delete from '../../../../public/delete.png'
 import more from '../../../../public/more.png'
 import add from '../../../../public/add.png'
+import Link from 'next/link'
 
-
-function index() {
+function Index() {
     const { loading, error, data } = useQuery(getCatalogues);
 
     if (loading) {
@@ -30,13 +30,15 @@ function index() {
                 <Nav />
                 <div className={style.panel}>
                     <div className={style.list}>
-                    <a href='/Admin/Categories/Add'>
-                    <Label id="Gestion des Catalogues" more={add.src}/> 
-                    </a>
-                    <Label id="ID" name="Name" action="Action"/>
+                        <Link href='/Admin/Categories/Add'>
+                            <a>
+                                <Label id="Gestion des Catalogues" more={add.src} />
+                            </a>
+                        </Link>
+                        <Label id="ID" name="Name" action="Action" />
                         {
-                            data.getCatalogues.map((catalogue) => (                       
-                                    <Label key={catalogue.id} id={catalogue.id} name={catalogue.name} delete={Delete.src} more={more.src} />                                                          
+                            data.getCatalogues.map((catalogue) => (
+                                <Label key={catalogue.id} id={catalogue.id} name={catalogue.name} delete={Delete.src} more={more.src} />
                             ))
                         }
                     </div>
@@ -49,4 +51,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

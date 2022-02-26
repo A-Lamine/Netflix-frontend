@@ -7,7 +7,8 @@ import Input from '../../components/UI/Input';
 import fb from '../../../public/FB.png'
 import authService from '../../services/auth.service';
 
-const index = () => {
+
+const Index = () => {
     const router = useRouter();
     const [user, setUser] = useState({});
     const [error, setError] = useState(false);
@@ -40,15 +41,15 @@ const index = () => {
                 <HeaderLogo />
             </div>
             <div className={styles.signinform}>
-                <h1 className={styles.formh1}>S'identifier</h1>
+                <h1 className={styles.formh1}>S&apos;identifier</h1>
                 <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
-                {
-                    error ? (
-                        <Message message={errorMessage} type="error" />
-                    )
-                        :
-                        ""
-                }
+                    {
+                        error ? (
+                            <Message message={errorMessage} type="error" />
+                        )
+                            :
+                            ""
+                    }
                     <Input
                         type="email"
                         label="Email"
@@ -88,7 +89,7 @@ const index = () => {
                         <span>S'identifer avec Facebook</span>
                     </div>
                     <div className={styles.signup}>Première visite sur Netflix ? <a href='/signup'>Inscrivez-vous</a></div>
-                    <div className={styles.span}>Cette page est protégée par Google reCAPTCHA pour nous assurer que vous n'êtes pas un robot. </div>
+                    <div className={styles.span}>Cette page est protégée par Google reCAPTCHA pour nous assurer que vous n&apos;êtes pas un robot. </div>
                 </div>
 
             </div>
@@ -97,4 +98,4 @@ const index = () => {
     )
 };
 
-export default index;
+export default Index;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './label.module.scss'
 
-const label = (props) => {
+const Label = (props) => {
 
   return (
     <div className={styles.label}>
@@ -20,4 +20,4 @@ const label = (props) => {
 
 
 
-export default label
+export default Label

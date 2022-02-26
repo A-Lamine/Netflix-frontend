@@ -10,58 +10,59 @@ import HomeMobile from '../components/HomeMobile'
 import HomeMac from '../components/HomeMac'
 import HomeJeunesse from '../components/HomeJeunesse'
 import connected from '../HOOC/connected';
+import Link from 'next/link'
 
-const index = () => {
+const Index = () => {
 
-    const [email,setemail] = useState(null)
+    const [email, setemail] = useState(null)
 
-    const handelsubmit = (e) =>{
+    const handelsubmit = (e) => {
         e.preventDefault()
-        
-        localStorage.setItem("email",email)
+
+        localStorage.setItem("email", email)
         Router.push("/signup")
     }
 
     return (
         <div>
-        <div className={styles.body}>
-            <header className={styles.header__main}>
-                <HeaderLogo />
-                <HeaderToolbar/>
-            </header>
-            <div className={styles.card}>
-                <h1 className={styles.h1}>
-                    Films, séries TV et bien plus en illimité.
-                </h1>
-                <h2 className={styles.h2}>
-                    Où que vous soyez. Annulez à tout moment.
-                </h2>
-                <div className={styles.form}>
-                    <h3 className={styles.h3}>
-                        Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour
-                        vous abonner ou réactiver votre abonnement.
-                    </h3>
-                    <div className={styles.email_form}>
-                        <input type="email" className={styles.email} onChange={(e)=>setemail(e.target.value)} placeholder='Adresse e-mail' />
-                        <button className={styles.btn_begin} onClick={handelsubmit}>
-                            <a className={styles.a} href='/'>Commancer</a>
-                            <img src={chevronright.src}/>
-                        </button>
-                    </div>
+            <div className={styles.body}>
+                <header className={styles.header__main}>
+                    <HeaderLogo />
+                    <HeaderToolbar />
+                </header>
+                <div className={styles.card}>
+                    <h1 className={styles.h1}>
+                        Films, séries TV et bien plus en illimité.
+                    </h1>
+                    <h2 className={styles.h2}>
+                        Où que vous soyez. Annulez à tout moment.
+                    </h2>
+                    <div className={styles.form}>
+                        <h3 className={styles.h3}>
+                            Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour
+                            vous abonner ou réactiver votre abonnement.
+                        </h3>
+                        <div className={styles.email_form}>
+                            <input type="email" className={styles.email} onChange={(e) => setemail(e.target.value)} placeholder='Adresse e-mail' />
+                            <button className={styles.btn_begin} onClick={handelsubmit}>
+                                <Link href='/'><a className={styles.a}>Commancer</a></Link>
+                                <img src={chevronright.src} />
+                            </button>
+                        </div>
 
+                    </div>
                 </div>
             </div>
+            <Separator />
+            <HomeTV />
+            <Separator />
+            <HomeMobile />
+            <Separator />
+            <HomeMac />
+            <Separator />
+            <HomeJeunesse />
         </div>
-                    <Separator />
-                    <HomeTV />
-                    <Separator />
-                    <HomeMobile />
-                    <Separator />
-                    <HomeMac />
-                    <Separator />
-                    <HomeJeunesse/>
-                    </div>
     );
 };
 
-export default connected(index);
+export default connected(Index);

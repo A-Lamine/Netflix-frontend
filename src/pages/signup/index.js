@@ -5,12 +5,12 @@ import styles from "../login/index.module.scss";
 import HeaderLogo from "../../components/header/HeaderLogo/HeaderLogo";
 import Input from '../../components/UI/Input';
 import fb from '../../../public/FB.png'
+import Link from 'next/link'
 
-
-const index = () => {
+const Index = () => {
     const router = useRouter();
-    const [user, setUser] = useState(  typeof window !== "undefined" ? ( user !=null ?  ({ email : localStorage.getItem("email")}) : {email : ""}) : null);
-    
+    const [user, setUser] = useState(typeof window !== "undefined" ? (user != null ? ({ email: localStorage.getItem("email") }) : { email: "" }) : null);
+
     console.log(user)
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -42,7 +42,7 @@ const index = () => {
                         onChange={(e) => {
                             setUser({ ...user, firstName: e.target.value });
                         }}
-                    />                           
+                    />
                     <Input
                         type="email"
                         label="Email"
@@ -67,7 +67,7 @@ const index = () => {
                             setUser({ ...user, password: e.target.value });
                         }}
                     />
-                    <input className="btn btn-Submith" type='submit' value="S'inscrire"/>
+                    <input className="btn btn-Submith" type='submit' value="S'inscrire" />
                 </form>
 
                 <div className={styles.information}>
@@ -78,8 +78,8 @@ const index = () => {
                         <a href='https://www.facebook.com/lamine.leparrin/'><img src={fb.src} className={styles.imgfb} /></a>
                         <span>S'identifer avec Facebook</span>
                     </div>
-                    <div className={styles.signup}>Vous avez un compte ? <a href='/login'>Connectez-vous</a></div>
-                    <div className={styles.span}>Cette page est protégée par Google reCAPTCHA pour nous assurer que vous n'êtes pas un robot. </div>
+                    <div className={styles.signup}>Vous avez un compte ? <Link href='/login'><a>Connectez-vous</a></Link></div>
+                    <div className={styles.span}>Cette page est protégée par Google reCAPTCHA pour nous assurer que vous n&apos;êtes pas un robot. </div>
                 </div>
 
             </div>
@@ -88,4 +88,4 @@ const index = () => {
     )
 };
 
-export default index;
+export default Index;

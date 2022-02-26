@@ -8,7 +8,7 @@ import HeaderConecte from '../../components/header/HeaderConecte'
 import styles from './index.module.scss'
 import { getCatalogues } from '../../graphql/queries/catalogues';
 import { useQuery } from '@apollo/client';
-const index = () => {
+const Index = () => {
 
   const { loading, error, data } = useQuery(getCatalogues);
 
@@ -35,4 +35,4 @@ if (error) {
   )
 }
 
-export default withAuth(verefySub(index))
+export default withAuth(verefySub(Index))

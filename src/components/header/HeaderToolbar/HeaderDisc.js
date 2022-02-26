@@ -4,7 +4,7 @@ import Router from "next/router"
 
 const HeaderDisc = () => {
 
-    const handelsubmit = (e) =>{
+    const handelsubmit = (e) => {
         e.preventDefault()
         localStorage.removeItem("token")
         localStorage.removeItem("email")
@@ -13,9 +13,9 @@ const HeaderDisc = () => {
     }
     return (
         <div>
-            
-                <button onClick={handelsubmit} className={styles.btn_login}>déconnecter</button>
-            
+
+            <button onClick={handelsubmit} className={styles.btn_login}>Déconnecter</button>
+
         </div>
     );
 

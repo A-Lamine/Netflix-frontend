@@ -6,7 +6,7 @@ import nwstyles from '../password/index.module.scss'
 import HeaderConecte from '../../../components/header/HeaderConecte'
 
 
-function index() {
+function Index() {
     const router = useRouter();
     const [email,setEmail] =  useState(  typeof window !== "undefined" ? (JSON.parse(localStorage.getItem('token')).email) : null);
     const [token, setToken] = useState(  typeof window !== "undefined" ? (JSON.parse(localStorage.getItem('token'))) : null);
@@ -70,4 +70,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

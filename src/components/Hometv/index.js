@@ -1,7 +1,9 @@
 import React from 'react';
 import hometv from "../../../public/home-tv.jpg";
 import styles from "./index.module.scss"
-const index = () => {
+
+
+const Index = () => {
     return (
         <div className={styles.minipage}>
             <div className={styles.minipagetext}>
@@ -9,11 +11,11 @@ const index = () => {
                 <span className={styles.minipagep}>Regardez Netflix sur votre Smart TV, PlayStation, Xbox, Chromecast, Apple TV, lecteurs Blu-ray et bien plus.</span>
             </div>
             <div className={styles.minipageimgpanel}>
-                <img className={styles.minipageimg} src={hometv.src}/>
+                <img className={styles.minipageimg} src={hometv.src} />
             </div>
         </div>
-        
+
     );
 };
 
-export default index;
+export default Index;

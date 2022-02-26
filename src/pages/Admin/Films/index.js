@@ -10,7 +10,7 @@ import Delete from '../../../../public/delete.png'
 import more from '../../../../public/more.png'
 import add from '../../../../public/add.png'
 
-function index() {
+function Index() {
     const { loading, error, data } = useQuery(getMovies);
 
     if (loading) {
@@ -29,13 +29,13 @@ function index() {
                 <Nav />
                 <div className={style.panel}>
                     <div className={style.list}>
-                    <a href='/Admin/Films/Add'>
-                    <Label id="Gestion des Films" more={add.src}/> 
-                    </a>
-                    <Label id="ID" name="Nom" action="Action"/>
+                        <a href='/Admin/Films/Add'>
+                            <Label id="Gestion des Films" more={add.src} />
+                        </a>
+                        <Label id="ID" name="Nom" action="Action" />
                         {
                             data.getMovies.map((movie) => (
-                                    <Label key={movie.id} id={movie.id} name={movie.title} delete={Delete.src} more={more.src} />  
+                                <Label key={movie.id} id={movie.id} name={movie.title} delete={Delete.src} more={more.src} />
                             ))
                         }
                     </div>
@@ -48,4 +48,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

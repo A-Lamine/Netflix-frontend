@@ -4,15 +4,16 @@ import Headerlogo from '../HeaderLogo/HeaderLogo'
 import HeaderTolbar from '../HeaderToolbar/HeaderDisc'
 import HeaderMenu from '../HeaderMenu/HeaderMenu'
 import HeaderProfil from '../HeaderLogo/HeaderProfil'
-function index() {
-    return (
-        <div className={styles.header__main}>
-        <Headerlogo/>
-        <HeaderMenu/>
-        <HeaderTolbar/>
-        <HeaderProfil/>
-        </div>
+
+function Index() {
+  return (
+    <div className={styles.header__main}>
+      <Headerlogo />
+      <HeaderMenu />
+      <HeaderTolbar />
+      <HeaderProfil />
+    </div>
   )
 }
 
-export default index
+export default Index

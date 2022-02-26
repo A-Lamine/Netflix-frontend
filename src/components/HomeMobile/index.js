@@ -1,7 +1,9 @@
 import React from 'react';
 import hometv from "../../../public/home-mobile.jpg";
 import styles from "./index.module.scss"
-const index = () => {
+
+
+const Index = () => {
     return (
         <div className={styles.minipage}>
             <div className={styles.minipageimgpanel}>
@@ -20,4 +22,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Index;

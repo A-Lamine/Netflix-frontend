@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/header/HeaderConecte'
 import styles from './index.module.scss'
+import Link from 'next/link'
 
 
 
 
 function Index() {
- 
-  const [email, setEmail] = useState(null)
-  const [forfait,setForfait] = useState(null)
-    /* const email = typeof window !== "undefined" ? JSON.parse(localStorage.getItem('token')).email.toString() : null */
-    /* const forfait = typeof window !== "undefined" ? JSON.parse(localStorage.getItem('token')).subscription : null */
-   
 
-    useEffect(() => setEmail(JSON.parse(localStorage.getItem('token')).email),[])
-    useEffect(() => setForfait(JSON.parse(localStorage.getItem('token')).subscription),[])
+  const [email, setEmail] = useState(null)
+  const [forfait, setForfait] = useState(null)
+  /* const email = typeof window !== "undefined" ? JSON.parse(localStorage.getItem('token')).email.toString() : null */
+  /* const forfait = typeof window !== "undefined" ? JSON.parse(localStorage.getItem('token')).subscription : null */
+
+
+  useEffect(() => setEmail(JSON.parse(localStorage.getItem('token')).email), [])
+  useEffect(() => setForfait(JSON.parse(localStorage.getItem('token')).subscription), [])
 
   return (
     <div>
@@ -46,12 +47,14 @@ function Index() {
               < div className={styles.r1c2r1}>
                 <div className={styles.rr1c2r1}>
                   <div className={styles.h3}>
-                  {email}
+                    {email}
                   </div>
                   <div className={styles.lien}>
-                    <a href='/Account/email'>
-                      Modifier l&apos;adresse e-mail
-                    </a>
+                    <Link href='/Account/email'>
+                      <a>
+                        Modifier l&apos;adresse e-mail
+                      </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -62,9 +65,11 @@ function Index() {
                     Mot de passe : *********
                   </div>
                   <div className={styles.lien}>
-                    <a href='/Account/password'>
-                      Modifier le mot de passe
-                    </a>
+                    <Link href='/Account/password'>
+                      <a>
+                        Modifier le mot de passe
+                      </a>
+                    </Link>
                   </div>
                 </div>
 

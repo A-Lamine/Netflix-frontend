@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from "./index.module.scss"
 
-const index = () => {
+const Index = () => {
     return (
         <div className={styles.sepa}>
-            
+
         </div>
     );
 };
 
-export default index;
+export default Index;

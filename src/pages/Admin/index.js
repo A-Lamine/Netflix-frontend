@@ -4,7 +4,10 @@ import Header from './AdminComposents/header'
 import Nav from './AdminComposents/nav'
 import categorie from '../../../public/categories.jpg'
 import film from '../../../public/Film.jpg'
-function index() {
+import Link from 'next/link'
+
+
+function Index() {
     return (
         <div>
             <Header />
@@ -13,22 +16,26 @@ function index() {
 
                 <div className={styles.panel}>
                     <div className={styles.card}>
-                        <a href='/Admin/Categories'>
-                            <div className={styles.mycard}>
-                                <img src={categorie.src} />
+                        <Link href='/Admin/Categories'>
+                            <a>
+                                <div className={styles.mycard}>
+                                    <img src={categorie.src} />
 
-                                <h1>Gérer les Categories</h1>
+                                    <h1>Gérer les Categories</h1>
 
-                            </div>
-                        </a>
-                        <a href='/Admin/Films'>
-                            <div className={styles.mycard}>
-                                <img src={film.src} />
+                                </div>
+                            </a>
+                        </Link>
+                        <Link href='/Admin/Films'>
+                            <a>
+                                <div className={styles.mycard}>
+                                    <img src={film.src} />
 
-                                <h1>Gérer les Films</h1>
+                                    <h1>Gérer les Films</h1>
 
-                            </div>
-                        </a>
+                                </div>
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -39,4 +46,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

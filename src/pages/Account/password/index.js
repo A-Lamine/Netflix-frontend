@@ -5,7 +5,7 @@ import nwstyles from './index.module.scss'
 import HeaderConecte from '../../../components/header/HeaderConecte'
 
 
-function index() {
+function Index() {
 
     return (
         <div>
@@ -42,4 +42,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

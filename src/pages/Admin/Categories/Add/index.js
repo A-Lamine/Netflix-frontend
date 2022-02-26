@@ -11,10 +11,10 @@ import { Catalogue } from '../../../../graphql/mutations/catalogue';
 import { useMutation } from "@apollo/react-hooks";
 
 
-function index() {
+function Index() {
     const [name, setName] = useState()
 
-   
+
 
     const [handleSubmit, { loading, error, data }] = useMutation(Catalogue, {
         variables: {
@@ -69,4 +69,4 @@ function index() {
     )
 }
 
-export default index
+export default Index
