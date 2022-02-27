@@ -4,8 +4,11 @@ import HeaderToolbar from "../../components/header/HeaderToolbar/HeaderDisc"
 import styles from "./index.module.scss"
 import Checkmarque from "../../../public/checkmarque"
 import withAuth from '../../HOOC/withAuth'
+import { loadStripe } from "@stripe/stripe-js";
+import stripeService from "../../services/stripe.service";
 
 function Index() {
+    const stripePromise = loadStripe(process.env.PUBLISH_KEY);
     const [colorl, setColorstandard] = useState(true)
     const [colorr, setColorpremieum] = useState(false)
 
@@ -19,6 +22,24 @@ function Index() {
         setColorpremieum(false);
     }
 
+
+    const handleConfirmation = async () => {
+        const token = JSON.parse(localStorage.getItem("token"));
+
+        const payload = {
+          total: colorl ? 1799: 899,
+          subscription: colorl ? "Premium" : "Standard"
+        }
+        try {
+          const stripe = await stripePromise;
+          const response = await stripeService.createSession(token.token, payload);
+          await stripe.redirectToCheckout({
+            sessionId: response.id,
+          });
+        } catch (error) {
+          console.log(error);
+        }
+      };
 
     return (
         <div className={styles.body}>
@@ -116,7 +137,7 @@ function Index() {
 
                 </div>
                 <div className={styles.btncontainer}>
-                    <button className={styles.btn_next}>Suivent</button>
+                    <button className={styles.btn_next} onClick={handleConfirmation}>Suivent</button>
                 </div>
 
             </div>
