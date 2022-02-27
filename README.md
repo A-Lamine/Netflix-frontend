@@ -39,7 +39,6 @@ ID : admin@lamine-netflix.fr
 Password : password  
   
 Enjoy :call_me_hand:
-  
 ## To Do :  
 - [X] 2 subscription packs
 - [ ] The user who unsubscribes will have the videos removed on the date of unsubscription
