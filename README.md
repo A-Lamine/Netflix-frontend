@@ -13,8 +13,8 @@
 
 ## How to clone/use the project
 ~~~bash
-git clone https://github.com/ecandotti/candotti-blog.git
-git clone https://github.com/A-Lamine/Netflix-Backend
+git clone https://github.com/A-Lamine/Netflix-frontend.git
+git clone https://github.com/A-Lamine/Netflix-Backend.git
 cd netflix-frontend
 npm run dev
 
