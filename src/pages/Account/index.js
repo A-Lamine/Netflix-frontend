@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../../components/header/HeaderConecte'
 import styles from './index.module.scss'
 import Link from 'next/link'
-
+import authService from '../../services/auth.service'
 
 
 
@@ -16,6 +16,8 @@ function Index() {
 
   useEffect(() => setEmail(JSON.parse(localStorage.getItem('token')).email), [])
   useEffect(() => setForfait(JSON.parse(localStorage.getItem('token')).subscription), [])
+
+
 
   return (
     <div>

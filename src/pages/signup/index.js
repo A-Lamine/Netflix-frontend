@@ -11,12 +11,12 @@ const Index = () => {
     const router = useRouter();
     const [user, setUser] = useState(typeof window !== "undefined" ? (user != null ? ({ email: localStorage.getItem("email") }) : { email: "" }) : null);
 
-    console.log(user)
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         authService.register(user)
             .then((data) => {
-                console.log(data);
+                
                 localStorage.setItem("token", JSON.stringify(data));
                 router.push("/movies");
             })

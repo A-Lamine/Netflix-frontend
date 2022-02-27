@@ -5,7 +5,7 @@ import Nav from './AdminComposents/nav'
 import categorie from '../../../public/categories.jpg'
 import film from '../../../public/Film.jpg'
 import Link from 'next/link'
-
+import isAdmin from '../../HOOC/isAdmin'
 
 function Index() {
     return (
@@ -46,4 +46,4 @@ function Index() {
     )
 }
 
-export default Index
+export default isAdmin(Index)

@@ -9,7 +9,7 @@ import stylesadd from './index.module.scss'
 import Message from '../../../../components/UI/Message/Message'
 import { Catalogue } from '../../../../graphql/mutations/catalogue';
 import { useMutation } from "@apollo/react-hooks";
-
+import isAdmin from '../../../../HOOC/isAdmin'
 
 function Index() {
     const [name, setName] = useState()
@@ -69,4 +69,4 @@ function Index() {
     )
 }
 
-export default Index
+export default isAdmin(Index)

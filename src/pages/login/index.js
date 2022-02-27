@@ -23,10 +23,10 @@ const Index = () => {
                 if (data.message) {
                     setError(true);
                     setErrorMessage(data.message);
-                    console.log(data.message);
+                    
                     return false;
                 }
-                console.log(data);
+                
                 localStorage.setItem("token", JSON.stringify(data));
                 router.push("/movies")
             })

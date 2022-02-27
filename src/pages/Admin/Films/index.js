@@ -10,6 +10,7 @@ import Delete from '../../../../public/delete.png'
 import more from '../../../../public/more.png'
 import add from '../../../../public/add.png'
 import Link from 'next/link'
+import isAdmin from '../../../HOOC/isAdmin'
 
 function Index() {
     const { loading, error, data } = useQuery(getMovies);
@@ -51,4 +52,4 @@ function Index() {
     )
 }
 
-export default Index
+export default isAdmin(Index)

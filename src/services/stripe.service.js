@@ -1,6 +1,6 @@
 export default {
     createSession(token,body) {
-        console.log("test");
+        /* console.log("test"); */
         return fetch(`${process.env.API_URL}api/v1/checkout/`, {
             method: "POST",
             headers: {

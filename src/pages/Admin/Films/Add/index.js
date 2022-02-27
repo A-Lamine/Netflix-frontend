@@ -11,7 +11,7 @@ import { Movies } from '../../../../graphql/mutations/movie';
 import { useQuery } from "@apollo/react-hooks";
 import { getCatalogues } from '../../../../graphql/queries/catalogues'
 import { useMutation } from "@apollo/react-hooks";
-
+import isAdmin from '../../../../HOOC/isAdmin'
 
 function Index() {
     /*     const [title, setTitle] = useState()
@@ -188,4 +188,4 @@ function Index() {
     )
 }
 
-export default Index
+export default isAdmin(Index)
