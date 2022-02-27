@@ -8,7 +8,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import stripeService from "../../services/stripe.service";
 
 function Index() {
-    const stripePromise = loadStripe(process.env.PUBLISH_KEY);
+    const stripePromise = loadStripe(`${process.env.PUBLISH_KEY}`);
     const [colorl, setColorstandard] = useState(true)
     const [colorr, setColorpremieum] = useState(false)
 
