@@ -14,10 +14,13 @@ const Index = () => {
     const [movie, setMovie] = useState({});
     const [controll, setControll] = useState(true)
     const { loading, error, data } = useQuery(getMovies);
+    const [info, setInfo] = useState(false) 
 
     function click() {
         player ? setPlayer(false) : setPlayer(true)
-        console.log(player)
+    }
+    function click2(){
+        info ? setInfo(false) : setInfo(true)
     }
     useEffect(() => {
         if (loading) {
@@ -49,7 +52,7 @@ const Index = () => {
                 <div className={player ? styles.hiden : styles.fadeOut}></div>
                 <div className={player ? styles.hiden : styles.info}>
                     <div className={styles.title}> {movie.title} </div>
-                    <div className={styles.description}>
+                    <div className={info ? styles.description : styles.hiden}>
                         {movie.description}
                     </div>
                     <div className={styles.links}>
@@ -58,8 +61,10 @@ const Index = () => {
                             <span>Play</span>
                         </a>
                         <button type="button">
+                            <div onClick={click2}>
                             <InfoIcon />
                             <span>Plus d&apos;nfos</span>
+                            </div>
                         </button>
                     </div>
                 </div>
