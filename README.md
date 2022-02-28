@@ -37,6 +37,7 @@ and an expiration date in the future
 ### ID and Password (Admin)  
 ID : admin@admin.fr  
 Password : password  
+And Go to .../Admin
   
 Enjoy :call_me_hand:
 ## To Do :  
