@@ -46,7 +46,7 @@ Enjoy :call_me_hand:
 - [X] Movies belong to one or more categories
 - [X] Provide a filter by categories on the film page
 - [ ] Plan a persistent wishlist
-- [ ] Prévoir des notifications mails
+- [ ] Provide email notifications
 - [X] Provide a back office that allows you to add videos & categories
 - [X] The user can find his subscription in his profile
 ## Bonus : 
