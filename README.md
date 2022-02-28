@@ -27,7 +27,7 @@ npm i
   
 ### ID and Password (User)  
 ID : user@user.fr  
-Password : password  
+Password : user  
 #### You can create your own account
 ~~~bash
 use test card number 4242 4242 4242 4242, a random three-digit CVC code
@@ -36,7 +36,7 @@ and an expiration date in the future
 
 ### ID and Password (Admin)  
 ID : admin@admin.fr  
-Password : password  
+Password : admin  
 And Go to .../Admin
   
 Enjoy :call_me_hand:
