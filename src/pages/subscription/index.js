@@ -27,7 +27,7 @@ function Index() {
         const token = JSON.parse(localStorage.getItem("token"));
 
         const payload = {
-          total: colorl ? 1799: 899,
+          total: colorl ? 6000: 3000,
           subscription: colorl ? "Premium" : "Standard"
         }
         try {
@@ -82,8 +82,8 @@ function Index() {
                                 <div className={styles.span}>Abonnement mensuel</div>
                             </div>
                             <div className={styles.offres}>
-                                <div className={colorr ? styles.selected : null}>8,99 €</div>
-                                <div className={colorl ? styles.selected : null}>17,99 €</div>
+                                <div className={colorr ? styles.selected : null}>30 €</div>
+                                <div className={colorl ? styles.selected : null}>60 €</div>
                             </div>
                         </div>
 
