@@ -6,7 +6,7 @@ import HeaderLogo from "../../components/header/HeaderLogo/HeaderLogo";
 import Input from '../../components/UI/Input';
 import fb from '../../../public/FB.png'
 import Link from 'next/link'
-
+import connected from "../../HOOC/connected";
 const Index = () => {
     const router = useRouter();
     const [user, setUser] = useState(typeof window !== "undefined" ? (user != null ? ({ email: localStorage.getItem("email") }) : { email: "" }) : null);
@@ -88,4 +88,4 @@ const Index = () => {
     )
 };
 
-export default Index;
+export default connected(Index);

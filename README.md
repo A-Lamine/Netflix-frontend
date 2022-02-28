@@ -2,7 +2,7 @@
     <img src="./public/Capture.PNG">
 </h1>
 
-# :earth_africa: Netflix Clone
+# :earth_africa: Netflix Clone Demo => https://netflix-frontend-three.vercel.app/
 *clone created in (NodeJS, NextJS) as part of a Dev Full-Stack evaluation at Ynov Campus*  
   
 - NodeJS  
@@ -19,14 +19,14 @@ cd netflix-frontend
 npm run dev
 
 ~~~
-:warning: Don't forget to change .env value, turn on your Apache and MySQL ! :warning:  
+:warning: Don't forget to change .env value ! :warning:  
 ~~~bash
 install :
 npm i
 ~~~
   
 ### ID and Password (User)  
-ID : user@lamine-netflix.fr  
+ID : user@user.fr  
 Password : password  
 #### You can create your own account
 ~~~bash
@@ -35,12 +35,12 @@ and an expiration date in the future
 ~~~
 
 ### ID and Password (Admin)  
-ID : admin@lamine-netflix.fr  
+ID : admin@admin.fr  
 Password : password  
   
 Enjoy :call_me_hand:
 ## To Do :  
-- [X] 2 subscription packs
+- [X] 2 Subscription packs
 - [ ] The user who unsubscribes will have the videos removed on the date of unsubscription
 - [X] Movies belong to one or more categories
 - [X] Provide a filter by categories on the film page

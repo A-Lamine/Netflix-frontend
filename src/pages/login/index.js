@@ -7,7 +7,7 @@ import Input from '../../components/UI/Input';
 import fb from '../../../public/FB.png'
 import authService from '../../services/auth.service';
 import Link from 'next/link';
-
+import connected from '../../HOOC/connected';
 
 const Index = () => {
     const router = useRouter();
@@ -99,4 +99,4 @@ const Index = () => {
     )
 };
 
-export default Index;
+export default connected(Index);

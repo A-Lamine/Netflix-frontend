@@ -42,15 +42,13 @@ function Index() {
 
 
     if ((loading) || (loading2)) {
-        console.log('....loading')
-        return "loading...";
+        
+        return "loading..."
 
     }
 
     if ((error) || (error2)) {
-        return null,
-            console.log(error2)
-
+        return null
     }
 
 
@@ -170,10 +168,11 @@ function Index() {
 
                         <div className={mystyles.panel_button}>
                             <button type='submit' className='btn btn-Submith'>Ajouter</button>
+  
                         </div>
                         {
                             data2 ? (
-                                <Message message="Film ajouter avec succès" type="success" />
+                                alert("Film ajouter avec succès")
                             )
                                 :
                                 ""

@@ -37,7 +37,7 @@ const Footer = () => {
 
         </div>
       </div>
-      <span className={styles.FooterLink}>Netflix France</span>
+      <span className={styles.FooterTitle}>Netflix France Cloned By <a className={styles.a} href='https://github.com/A-Lamine'>Lamine ADEL</a></span>
     </div>
     </div>
   );
