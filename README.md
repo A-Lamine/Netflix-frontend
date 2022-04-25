@@ -26,7 +26,7 @@ npm i
 ~~~
   
 ### ID and Password (User)  
-ID : user@user.fr  
+ID : user@user.com
 Password : user  
 #### You can create your own account
 ~~~bash
